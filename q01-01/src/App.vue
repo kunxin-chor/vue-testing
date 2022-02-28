@@ -16,7 +16,7 @@ export default {
   },
   methods:{
     'update':function(){
-      this.msg = "Hello World!"
+   
     }
   }
 
