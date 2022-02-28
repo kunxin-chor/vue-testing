@@ -1,6 +1,8 @@
 echo "Creating question"
 vue create "$@"
-cp templates/App.vue "$@"/src/components/App.vue
 cp templates/jest.config.js "$@"/
+echo "Waiting for boilerplate Vue files to complete"
 sleep 2s
 cp templates/vue.config.js "$@"/
+cp templates/App.vue "$@"/src/App.vue
+rm "$@"/src/components/HelloWorld.vue
