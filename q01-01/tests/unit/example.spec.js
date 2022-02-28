@@ -9,6 +9,6 @@ describe('test-q01-01', () => {
     await wrapper.find("#btn").trigger('click');
     const span = wrapper.find('#message');
     expect(span.text().toLowerCase()).toMatch("hello world!");
-    expect(wrapper.find().text()).toMatch(msg)
+
   })
 })

@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <span id='message'>{{msg}}</span>
-    <button id="btn">Hello</button>
+    <button v-on:click="update" id="btn">Hello</button>
   </div>
 </template>
 
@@ -9,8 +9,15 @@
 
 export default {
   name: 'App',
-  data:{
-    'msg':''
+  data:function(){
+    return {
+      'msg':''
+    }
+  },
+  methods:{
+    'update':function(){
+      this.msg = "Hello World!"
+    }
   }
 
 }

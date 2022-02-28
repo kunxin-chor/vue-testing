@@ -3,8 +3,8 @@
 ## Question
 There is a button defined within the `<template>` of the `App.vue`. 
 You are to complete the following tasks:
-* Add an event listener to the button to detect clicls
-* When the button is clicked, change the `msg` data property to "Hello WWorld"
+* Add an event listener to the button to detect clicks. 
+* When the button is clicked, change the `msg` data property to "Hello World!"
 
 ## Project setup
 ```
