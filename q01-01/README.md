@@ -1,5 +1,11 @@
 # q01-01
 
+## Question
+There is a button defined within the `<template>` of the `App.vue`. 
+You are to complete the following tasks:
+* Add an event listener to the button to detect clicls
+* When the button is clicked, change the `msg` data property to "Hello WWorld"
+
 ## Project setup
 ```
 yarn install
