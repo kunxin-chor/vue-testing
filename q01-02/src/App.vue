@@ -1,7 +1,6 @@
 <template>
   <div id="app">
-    <button id="btn" v-on:click="click">Click me</button>
-    <span id="msg">{{msg}}</span>
+  
   </div>
 </template>
 
@@ -14,13 +13,11 @@ export default {
   },
   data:function(){
     return {
-      'msg':''
+      
     }
   },
   methods:{
-    click:function() {
-      this.msg = "rainbows and sunshine"
-    }
+   
   }
 }
 </script>
