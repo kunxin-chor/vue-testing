@@ -1,12 +1,14 @@
 import { shallowMount } from '@vue/test-utils'
-import HelloWorld from '@/components/HelloWorld.vue'
+import App from '@/App.vue'
 
-describe('HelloWorld.vue', () => {
-  it('renders props.msg when passed', () => {
-    const msg = 'new message'
-    const wrapper = shallowMount(HelloWorld, {
-      propsData: { msg }
+describe('test-q01-02', () => {
+  it('renders sunshine and rainbow when button is clicked',async () => {
+    const wrapper = shallowMount(App, {
+
     })
-    expect(wrapper.text()).toMatch(msg)
+    await wrapper.find("#btn").trigger('click');
+    const span = wrapper.find('#msg');
+    expect(span.text().toLowerCase()).toMatch("rainbows and sunshine");
+
   })
 })
