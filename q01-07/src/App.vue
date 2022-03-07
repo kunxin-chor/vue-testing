@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <div id="text" v-if="show==1">Hello there</div>
+    <div id="hello" v-if="show==1">Hello there</div>
+    <div id="goodbye" v-else>Goodbye for now!</div>
     <button id="btn" v-on:click="toggle">Click me</button>
   </div>
 </template>
