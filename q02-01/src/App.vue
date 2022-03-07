@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <input type="text" v-model="input"/>
+    <input type="text"/>
     <div>
-      <span id="display">{{input}}</span>
+      <span id="display"></span>
     </div>
   </div>
 </template>
