@@ -1,12 +1,29 @@
 import { shallowMount } from '@vue/test-utils'
-import HelloWorld from '@/components/HelloWorld.vue'
+import App from '@/App.vue'
 
-describe('HelloWorld.vue', () => {
-  it('renders props.msg when passed', () => {
-    const msg = 'new message'
-    const wrapper = shallowMount(HelloWorld, {
-      propsData: { msg }
-    })
-    expect(wrapper.text()).toMatch(msg)
+describe('test-q01-06', () => {
+  it('it should not display hello there at the start', () => {
+    const wrapper = shallowMount(App, {})   
+    const span = wrapper.find('#text');
+    expect(span.element).toBeUndefined();
+  })
+
+  it('it should display hello there when the button is clicked', () => {
+    const wrapper = shallowMount(App, {})   
+    const btn = wrapper.find('#btn');
+    await btn.trigger('click');
+    const span = wrapper.find('#text');
+    expect(span.text()).toMatch('Hello there');
+  })
+
+  it('it should hide hello there when the button is clicked again', () => {
+    const wrapper = shallowMount(App, {})   
+    const btn = wrapper.find('#btn');
+    await btn.trigger('click');
+    const span = wrapper.find('#text');
+    expect(span.text()).toMatch('Hello there');
+    await btn.trigger('click');
+    span = wrapper.find('#text');
+    expect(span.element).toBeUndefined();
   })
 })
