@@ -22,9 +22,7 @@ export default {
     'setApple':function(){
       this.selected = 1;
     },
-    'setOrange':function(){
-      this.selected = 2;
-    }
+   
   }
 }
 </script>
