@@ -1,8 +1,7 @@
 <template>
   <div id="app">
     <button id="apple-btn" v-on:click="setApple">Apple</button>
-    <div id="apple-display" style='background-color:red'>Apple</div>
-
+    <div id="apple-display" style='background-color:red' v-if="selected==1">Apple</div>
   </div>
 </template>
 
