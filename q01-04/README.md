@@ -1,11 +1,11 @@
 # q01-04: Using the `v-if` directives
 
 ## Question
-There are two buttons, one labeled as `Apple` and the other labeled `Orange`. There are also two `<div>`, one showing the word Apple  and the other one the word Orange. 
+There is one button, one labeled as `Apple`. There is also one `<div>`, showing the word Apple. 
 
-Using `v-if`, display the Apple `<div>` if the Apple button is clicked, and the orange `<div>` if the orange button is clicked.
+Using `v-if`, display the Apple `<div>` when the Apple button is clicked. The Apple `<div>` should not be displayed when the Vue app first starts.
 
-Hint: examine the `v-on` code for the two buttons carefully.
+Hint: examine the `v-on` code for the the buttons carefully. 
 
 ## Project setup
 ```
