@@ -8,7 +8,7 @@ describe('test-q01-06', () => {
     expect(span.element).toBeUndefined();
   })
 
-  it('it should display hello there when the button is clicked', () => {
+  it('it should display hello there when the button is clicked', async () => {
     const wrapper = shallowMount(App, {})   
     const btn = wrapper.find('#btn');
     await btn.trigger('click');
@@ -16,14 +16,14 @@ describe('test-q01-06', () => {
     expect(span.text()).toMatch('Hello there');
   })
 
-  it('it should hide hello there when the button is clicked again', () => {
+  it('it should hide hello there when the button is clicked again', async () => {
     const wrapper = shallowMount(App, {})   
     const btn = wrapper.find('#btn');
     await btn.trigger('click');
     const span = wrapper.find('#text');
     expect(span.text()).toMatch('Hello there');
     await btn.trigger('click');
-    span = wrapper.find('#text');
-    expect(span.element).toBeUndefined();
+    const span2 = wrapper.find('#text');
+    expect(span2.element).toBeUndefined();
   })
 })
