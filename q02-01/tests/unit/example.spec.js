@@ -1,14 +1,19 @@
 import { shallowMount } from '@vue/test-utils'
 import App from '@/App.vue'
 
-describe('update value in input',  () => {
-  it('renders props.msg when passed', async () => {
-    const wrapper = shallowMount(App, {});
-    wrapper.find('input').element.value = "AP";
-    await wrapper.find('input').trigger('input');
- 
-    const span = wrapper.find('#display');
-    expect(span.text()).toMatch("AP");
-    expect(wrapper.vm.input).toMatch('AP')
+describe('test-q01-04', () => {
+  it('display should not display apples at start',async () => {
+    const wrapper = shallowMount(App, {})    
+    const span = wrapper.find('#apple-display');
+    expect(span.element).toBeUndefined();
+
   })
+
+  it('display display apples when button is clicked',async () => {
+     const wrapper = shallowMount(App, {});
+     await wrapper.find('#apple-btn').trigger('click');
+     const span = wrapper.find('#apple-display');
+     expect(span.text()).toMatch('Apple');
+  })
+  
 })

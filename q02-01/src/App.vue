@@ -1,9 +1,7 @@
 <template>
   <div id="app">
-    <input type="text"/>
-    <div>
-      <span id="display"></span>
-    </div>
+    <button id="apple-btn" v-on:click="setApple">Apple</button>
+    <div id="apple-display" style='background-color:red'>Apple</div>
   </div>
 </template>
 
@@ -11,14 +9,20 @@
 
 export default {
   name: 'App',
+  data:function(){
+    return {
+      'selected':''
+    }
+  },
   components: {
     
   },
-  data:function(){
-    return {
-      'input':""
-    }
-  },
+  methods:{
+    'setApple':function(){
+      this.selected = 1;
+    },
+   
+  }
 }
 </script>
 
