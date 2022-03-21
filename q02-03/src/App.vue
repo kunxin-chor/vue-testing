@@ -1,7 +1,8 @@
 <template>
   <div id="app">
-    <div id="text" v-if="show==1">Hello there</div>
-    <button id="btn" v-on:click="toggle">Click me</button>
+    <div id="hello">Hello there</div>
+    <div id="goodbye">Goodbye for now!</div>
+    <button id="btn">Click me</button>
   </div>
 </template>
 
@@ -14,13 +15,11 @@ export default {
   },
   data:function(){
     return {
-      'show':false
+   
     }
   },
   methods:{
-    toggle() {
-      this.show = !this.show;
-    }
+   
   }
 }
 </script>

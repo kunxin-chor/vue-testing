@@ -1,29 +1,48 @@
 import { shallowMount } from '@vue/test-utils'
 import App from '@/App.vue'
 
-describe('test-q01-76', () => {
-  it('it should not display hello there at the start', () => {
+describe('test-q01-08.vue', () => {
+  it('it should show 3 after 3 presses', async () => {
     const wrapper = shallowMount(App, {})   
-    const span = wrapper.find('#hello');
-    expect(span.element).toBeUndefined();
-  })
-
-  it('it should display hello there when the button is clicked', async () => {
-    const wrapper = shallowMount(App, {})   
-    const btn = wrapper.find('#btn');
+    const btn = wrapper.find('#increment');
     await btn.trigger('click');
-    const span = wrapper.find('#hello');
-    expect(span.text()).toMatch('Hello there');
+    await btn.trigger('click');
+    await btn.trigger('click');
+    const counter = wrapper.find('#counter');
+    expect(counter.text()).toMatch("3");
   })
 
-  it('it should hide hello there when the button is clicked again', async () => {
-      const wrapper = shallowMount(App, {})   
-      const btn = wrapper.find('#btn');
+  it('it should show 10 after 13 presses', async () => {
+    const wrapper = shallowMount(App, {})   
+    const btn = wrapper.find('#increment');
+    for (let i=0; i < 13; i++) {
       await btn.trigger('click');
-      const span = wrapper.find('#hello');
-      expect(span.text()).toMatch('Hello there');
+    }
+    const counter = wrapper.find('#counter');
+    expect(counter.text()).toMatch("10");
+  })
+
+
+  it('it should show -3 after 3 decrement', async () => {
+    const wrapper = shallowMount(App, {})   
+    const btn = wrapper.find('#decrement');
+    await btn.trigger('click');
+    await btn.trigger('click');
+    await btn.trigger('click');
+    const counter = wrapper.find('#counter');
+    expect(counter.text()).toMatch("-3");
+  })
+
+  it('it should show -10 after 13 decrement', async () => {
+    const wrapper = shallowMount(App, {})   
+    const btn = wrapper.find('#decrement');
+    for (let i =0; i < 13; i++) {
       await btn.trigger('click');
-      const span2 = wrapper.find('#goodbye');
-      expect(span2.text()).toMatch("Goodbye for now!")
+    }
+    
+    const counter = wrapper.find('#counter');
+    expect(counter.text()).toMatch("-10");
   })
 })
+
+

@@ -1,28 +1,29 @@
 import { shallowMount } from '@vue/test-utils'
 import App from '@/App.vue'
 
-describe('test-q01-05', () => {
-  it('display should not display apples and oranges at start',async () => {
-    const wrapper = shallowMount(App, {})    
-    const span = wrapper.find('#apple-display');
+describe('test-q01-06', () => {
+  it('it should not display hello there at the start', () => {
+    const wrapper = shallowMount(App, {})   
+    const span = wrapper.find('#text');
     expect(span.element).toBeUndefined();
-    const orange = wrapper.find("#orange-display");
-    expect(orange.element).toBeUndefined();
-
   })
 
-  it('display display apples when button is clicked',async () => {
-     const wrapper = shallowMount(App, {});
-     await wrapper.find('#apple-btn').trigger('click');
-     const span = wrapper.find('#apple-display');
-     expect(span.text()).toMatch('Apple');
+  it('it should display hello there when the button is clicked', async () => {
+    const wrapper = shallowMount(App, {})   
+    const btn = wrapper.find('#btn');
+    await btn.trigger('click');
+    const span = wrapper.find('#text');
+    expect(span.text()).toMatch('Hello there');
   })
-  
-  it('display display oranges when button is clicked',async () => {
-    const wrapper = shallowMount(App, {});
-    await wrapper.find('#orange-btn').trigger('click');
-    const span = wrapper.find('#orange-display');
-    expect(span.text()).toMatch('Orange');
- })
 
+  it('it should hide hello there when the button is clicked again', async () => {
+    const wrapper = shallowMount(App, {})   
+    const btn = wrapper.find('#btn');
+    await btn.trigger('click');
+    const span = wrapper.find('#text');
+    expect(span.text()).toMatch('Hello there');
+    await btn.trigger('click');
+    const span2 = wrapper.find('#text');
+    expect(span2.element).toBeUndefined();
+  })
 })

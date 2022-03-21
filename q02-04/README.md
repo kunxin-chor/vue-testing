@@ -1,13 +1,15 @@
-# q1-06
+# q01-08
 
-## Questions
-Study the `<template>` in the Vue file:
-* There is a `<div>` with the text `Hello there` inside there. 
-* There is a `<button>` with the label `Click me`
+## Question
+In this execrise, you get to create a counter. There is a `<div>` with the id of `counter`, and two
+buttons, with the id of `increment` and `decrement` respectively.
+Complete the following tasks:
+1. Create a data property named `count` and set its initial value to 0
+2. Display the `count` data property inside `<div#counter>`
+3. Add event listener to the `Increment` button so that when it is clicked, increase the `count` data property by 1
+4. Add event listener to the `Decrement` button so that when it is clicked, increase the `count` data property by 1
+5. Make sure that the `count` data property does not go beyond 10 and go below -10.
 
-Using `v-if`, add code such that when the button is clicked, the `<div>` with the text `Hello there` is displayed. And when the `<button>` is clicked again, hide the text. 
-
-Hint: you need a data property to keep track if the `<div>` should be shown or not.
 
 ## Project setup
 ```
