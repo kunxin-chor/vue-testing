@@ -12,12 +12,12 @@ export default {
   name: 'App',
   data: function(){
     return {
-      'textSize':24
+      'textSize':'24px'
     }
   },
   methods:{
     'makeLarger':function(){
-      this.data.textSize = 36;
+      this.textSize = '36px';
     }
   },
   components: {
