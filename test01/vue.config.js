@@ -1,6 +1,6 @@
 module.exports = {
-    // options...
     devServer: {
-        disableHostCheck: true
-    }
-}
+      historyApiFallback: true,
+      allowedHosts: ["all"],
+  }}
+  
