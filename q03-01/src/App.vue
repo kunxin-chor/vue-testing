@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <h1>Hello</h1>
-    <span id="msg" v-bind:style='{fontSize:textSize}'>Hello World</span>
+    <span id="msg">Hello World</span>
     <button id="btn" v-on:click="makeLarger">Make Larger</button>
   </div>
 </template>
