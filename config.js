@@ -1,10 +1,4 @@
-
-        let user = {
-            'name': 'johnsmith',
-            'email': 'johnsmith@asd.com',
-            'batch': 'asd',
-            'jwt': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG5zbWl0aEBhc2QuY29tIiwicm9sZSI6IlNUVURFTlQiLCJpYXQiOjE2NDgxODQ3Mjh9.75zGotCy35vRmW_HaJR5bsdDoftGjx7XbcOFbttsJCk'
-        }
-
-        export default user;
-        
+module.exports = {
+    'tutorialCode':'vue-labs',
+    'BASE_API_URL':"https://3000-johnbenedictyan-tgcresul-dmpmk4gpdjx.ws-us38.gitpod.io/"
+}

@@ -1,7 +1,8 @@
 const prompt = require('prompt-sync')();
 const axios = require('axios');
 const fs = require('fs');
-const BASE_API_URL="https://3000-johnbenedictyan-tgcresul-dmpmk4gpdjx.ws-us38.gitpod.io/";
+const config = require('./config')
+const BASE_API_URL=config.BASE_API_URL;
 
 async function main() {
     console.log("Setup Utility for Vue Questions");
@@ -18,9 +19,9 @@ async function main() {
             'jwt': '${response.data.token}'
         }
 
-        export default user;
+        modules.export = user;
         `
-    fs.writeFileSync('config.js', configTemplate);
+    fs.writeFileSync('user.js', configTemplate);
     console.log("Setup done! Please log in reguarly!");
 }
 main();
