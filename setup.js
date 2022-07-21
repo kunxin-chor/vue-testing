@@ -14,12 +14,12 @@ async function main() {
     })
 
     let configTemplate = `
-        let user = {
-            'email': '${email}',
-            'jwt': '${response.data.token}'
-        }
+let user = {
+    'email': '${email}',
+    'jwt': '${response.data.accessToken}'
+}
 
-        modules.export = user;
+module.exports = user;
         `
     fs.writeFileSync('user.js', configTemplate);
     console.log("Setup done! Please log in reguarly!");
