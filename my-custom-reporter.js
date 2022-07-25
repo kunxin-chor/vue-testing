@@ -24,18 +24,24 @@ class MyCustomReporter {
     async function sendSubmission() {
       const endpoint = config.BASE_API_URL + `api/tutorials/${config.tutorialCode}/questions/${questionCode}/submissions`
 
-      let response = await axios.post(endpoint, {
-        'results': results.numFailedTests > 0 ? 'failed' : 'passed'
-      }, {
-        headers: {
-          'Authorization': `Basic ${user.jwt}`
+      try {
+        let response = await axios.post(endpoint, {
+          'results': results.numFailedTests > 0 ? 'failed' : 'passed'
+        }, {
+          headers: {
+            'Authorization': `Basic ${user.jwt}`
+          }
+        })
+        if (response.data.message == "success") {
+          console.log("Your attempt has been submitted. You can try again if you have gotten a better answer!");
+        } else {
+          console.log("There's a problem logging your submission. Please try again!");
         }
-      })
-      if (response.data.message == "success") {
-        console.log("Your attempt has been submitted. You can try again if you have gotten a better answer!");
-      } else {
-        console.log("There's a problem logging your submission. Please try again!");
+      } catch(e) {
+        console.log(e);
+        console.log("There has been a problem submitting your results. Please re-login and try again");
       }
+      
     }
     sendSubmission();
 
