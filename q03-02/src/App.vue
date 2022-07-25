@@ -8,16 +8,13 @@
 </template>
 
 <script>
-
 export default {
-  name: 'App',
-  data: {
-    bgcolor:""
+  name: "App",
+  data: function () {
+    return { bgcolor: "" };
   },
-  components: {
-   
-  }
-}
+  components: {},
+};
 </script>
 
 
