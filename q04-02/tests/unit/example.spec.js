@@ -1,12 +1,12 @@
-import { shallowMount } from '@vue/test-utils'
-import HelloWorld from '@/components/HelloWorld.vue'
+import { mount } from '@vue/test-utils'
+import AverageNumber from '@/components/AverageNumber.vue'
 
-describe('HelloWorld.vue', () => {
+describe('AverageNumber.vue', () => {
   it('renders props.msg when passed', () => {
-    const msg = 'new message'
-    const wrapper = shallowMount(HelloWorld, {
-      propsData: { msg }
-    })
-    expect(wrapper.text()).toMatch(msg)
+    const wrapper = mount(AverageNumber,{
+      propsData: { num1: 7, num2: 5 }
+    })  
+    const averageNumber = wrapper.findComponent(AverageNumber);
+    expect(averageNumber.find('div').text().toLowerCase()).toMatch("6")
   })
 })
