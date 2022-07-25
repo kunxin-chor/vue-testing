@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div></div>
+    <div class="box" ></div>
     <button>Red</button>
     <button>Green</button>
     <button>Blue</button>
@@ -17,4 +17,11 @@ export default {
 };
 </script>
 
+<style scoped>
+.box {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+}
+</style>
 
