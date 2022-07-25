@@ -37,8 +37,7 @@ class MyCustomReporter {
         } else {
           console.log("There's a problem logging your submission. Please try again!");
         }
-      } catch(e) {
-        console.log(e);
+      } catch(e) {       
         console.log("There has been a problem submitting your results. Please re-login and try again");
       }
       
