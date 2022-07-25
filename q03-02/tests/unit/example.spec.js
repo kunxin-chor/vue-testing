@@ -1,5 +1,5 @@
 import { shallowMount } from '@vue/test-utils'
-import App from '@/components/HelloWorld.vue'
+import App from '@/App.vue'
 
 describe('HelloWorld.vue', () => {
   it('should change color', async () => {
