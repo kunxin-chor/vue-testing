@@ -12,7 +12,7 @@ export default {
   name: 'App',
   data:function(){
     return {
-      'textSize':'12px'
+      'textSize':12
     }
   },
   components: {
