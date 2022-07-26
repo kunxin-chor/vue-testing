@@ -1,6 +1,8 @@
 <template>
   <div id="app">
     <div id="result"></div>
+    <input type="text"/>
+    <input type="text"/>
   </div>
 </template>
 
