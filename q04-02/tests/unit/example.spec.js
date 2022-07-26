@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils'
-import AverageNumber from '@/components/AverageNumber.vue'
+import AverageNumber from '@/AverageNumber.vue'
 
 describe('AverageNumber.vue', () => {
   it('renders props.msg when passed', () => {

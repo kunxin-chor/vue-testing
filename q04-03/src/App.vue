@@ -12,12 +12,13 @@ import TrafficLight from '@/TrafficLight.vue'
 
 export default {
   name: 'App',
+  data:function(){
+    return {
+      status:''
+    }
+  },
   components: {
     TrafficLight
   }
 }
 </script>
-
-
-
-    TrafficLight
