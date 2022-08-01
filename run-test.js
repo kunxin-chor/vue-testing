@@ -1,7 +1,9 @@
 const { spawn } = require("child_process");
 const testName = process.argv[2];
 
-spawn('npm', [`run`, `test:unit`, `--prefix`,  `./${testName}`], {stdio:'inherit'})
+const cmd = process.platform == 'win32' ? 'npm.cmd' : 'npm';
+
+spawn(cmd, [`run`, `test:unit`, `--prefix`,  `./${testName}`], {stdio:'inherit'})
   .on('exit', function (error) {
 
     if(!error){

@@ -2,6 +2,7 @@
 const config = require('./config.js');
 const axios = require('axios');
 const fs = require('fs');
+const path = require('path');
 
 class MyCustomReporter {
   constructor(globalConfig, options) {
@@ -18,7 +19,7 @@ class MyCustomReporter {
     }
     const user = require('./user.js');
     const rootDir = this._globalConfig.rootDir;
-    const chunks = rootDir.split('/');
+    const chunks = rootDir.split(path.sep);
     const questionCode = chunks[chunks.length - 1];
 
     async function sendSubmission() {
@@ -39,6 +40,7 @@ class MyCustomReporter {
         }
       } catch(e) {       
         console.log("There has been a problem submitting your results. Please re-login and try again");
+        console.log("Error", e.statusText);
       }
       
     }

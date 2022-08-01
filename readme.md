@@ -2,6 +2,7 @@
 
 If using your own computer, make sure **Vue CLI** is installed:
 ```
+yarn install
 npm install -g @vue/cli
 ```
 
