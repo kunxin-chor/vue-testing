@@ -3,7 +3,7 @@ const testName = process.argv[2];
 
 const cmd = process.platform == 'win32' ? 'npm.cmd' : 'npm';
 
-spawn(cmd, [`run`, `test:unit`, `--prefix`,  `./${testName}`], {stdio:'inherit'})
+spawn(cmd, [`run`, `-s`, `test:unit`, `--prefix`,  `./${testName}`], {stdio:'inherit'})
   .on('exit', function (error) {
 
     if(!error){
