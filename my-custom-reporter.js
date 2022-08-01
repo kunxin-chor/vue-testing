@@ -11,7 +11,7 @@ class MyCustomReporter {
 
   onRunComplete(contexts, results) {
 
-    if (!fs.existsSync('../user.js')) {
+    if (!fs.existsSync(`${__dirname}/user.js`)) {
       console.log("You are not logged in, therefore results are not submitted.");
       console.log("To login, please run 'node setup.js' in the project directory");
       return;
