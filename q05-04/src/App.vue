@@ -3,7 +3,7 @@
     <div id="lights">
     </div>
     <input type="radio"/><label>Red</label>
-    <input type="radio"/><label>Green<label>
+    <input type="radio"/><label>Green</label>
     <input type="radio"/><label>Yellow</label>
   </div>
 </template>
