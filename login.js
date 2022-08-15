@@ -30,6 +30,7 @@ async function main() {
             console.log("Wrong password or email");
         } else if (e.statusCode = 500) {
             console.log("Something went wrong at the server");
+            console.log(e.statusText);
         }
     }
 }
