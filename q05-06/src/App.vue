@@ -1,11 +1,11 @@
 <template>
   <div id="app">
-    <input type="checkbox"/><label>A</label>
-    <input type="checkbox"/><label>B</label>
-    <input type="checkbox"/><label>C</label>
-    <input type="checkbox"/><label>D</label>
-    <input type="checkbox"/><label>E</label>
-    <input type="checkbox"/><label>F</label>
+    <input type="checkbox" value="a" /><label>A</label>
+    <input type="checkbox" value="b" /><label>B</label>
+    <input type="checkbox" value="c" /><label>C</label>
+    <input type="checkbox" value="d" /><label>D</label>
+    <input type="checkbox" value="e" /><label>E</label>
+    <input type="checkbox" value="f" /><label>F</label>
     <div id="result"></div>
   </div>
 
