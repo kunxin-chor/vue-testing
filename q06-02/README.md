@@ -1,24 +1,5 @@
 # q06-02
 
-## Project setup
-```
-yarn install
-```
-
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Questions
+In App.vue, there is a textbox with the id of `message`. Below it is a `<div>` with the id of count.
+Make it such that the div#count element will display the number of characters typed into the textbox.

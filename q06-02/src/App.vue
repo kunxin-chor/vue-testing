@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-
+    <input type="text"/>
+    <div id="count"></div>
   </div>
 </template>
 
