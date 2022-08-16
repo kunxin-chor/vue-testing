@@ -1,24 +1,10 @@
 # q05-06
 
-## Project setup
-```
-yarn install
-```
+## Questions
+In App.vue, there are six checkboxes, each given the value "A", "B", "C", "D", "E" and "F" respectively. There is also a `<div>` with the id of the "result"..
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+Your tasks are to:
 
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+1. Create a data property named selected
+2. Bind the selected property to the six checkboxes
+3. Display the number of selected checkboxes in the div#result. 
