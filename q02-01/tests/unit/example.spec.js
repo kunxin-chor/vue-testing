@@ -1,7 +1,7 @@
 import { shallowMount } from '@vue/test-utils'
 import App from '@/App.vue'
 
-describe('test-q01-05', () => {
+describe('test-q02-01', () => {
   it('display should not display apples and oranges at start',async () => {
     const wrapper = shallowMount(App, {})    
     const span = wrapper.find('#apple-display');

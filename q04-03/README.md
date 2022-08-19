@@ -1,9 +1,8 @@
-# Question
+# q04-03
 
 In the project, there is a component named `TrafficLight.vue`. Within it, there is a `<div>` with background colour 'white' and a black border. An instance of the TrafficLight has already been created for you in the App component.
 
 In the App component, there are three buttons. The buttons are labelled as "Go", "Wait" and "Stop". There is a data property named status.
-
 
 Complete the following tasks:
 

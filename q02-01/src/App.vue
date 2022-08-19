@@ -2,8 +2,8 @@
   <div id="app">
     <button id="apple-btn" v-on:click="setApple">Apple</button>
     <button id="orange-btn" v-on:click="setOrange">Orange</button>
-    <div id="apple-display" style='background-color:red' v-if="selected==1">Apple</div>
-    <div id="orange-display" style='background-color:orange' v-if="selected==2">Orange</div>
+    <div id="apple-display" style='background-color:red'>Apple</div>
+    <div id="orange-display" style='background-color:orange'>Orange</div>
   </div>
 </template>
 
@@ -21,10 +21,10 @@ export default {
   },
   methods:{
     'setApple':function(){
-      this.selected = 1;
+     
     },
     'setOrange':function(){
-      this.selected = 2;
+ 
     }
   }
 }

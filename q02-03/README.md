@@ -1,4 +1,4 @@
-# q1-06
+# q02-03
 
 ## Questions
 Study the `<template>` in the Vue file:

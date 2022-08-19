@@ -1,7 +1,7 @@
 import { shallowMount } from '@vue/test-utils'
 import App from '@/App.vue'
 
-describe('test-q01-08.vue', () => {
+describe('test-q02-04.vue', () => {
   it('it should show 3 after 3 presses', async () => {
     const wrapper = shallowMount(App, {})   
     const btn = wrapper.find('#increment');

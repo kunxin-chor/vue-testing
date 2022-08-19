@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <div id="text" v-if="show==1">Hello there</div>
-    <button id="btn" v-on:click="toggle">Click me</button>
+    <div id="text">Hello there</div>
+    <button id="btn">Click me</button>
   </div>
 </template>
 
@@ -19,7 +19,7 @@ export default {
   },
   methods:{
     toggle() {
-      this.show = !this.show;
+     
     }
   }
 }

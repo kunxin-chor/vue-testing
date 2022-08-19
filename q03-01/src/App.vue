@@ -17,7 +17,7 @@ export default {
   },
   methods:{
     'makeLarger':function(){
-      this.textSize = '36px';
+    
     }
   },
   components: {
